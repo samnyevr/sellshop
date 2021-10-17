@@ -33,6 +33,7 @@ module.exports = {
   output: {
     // output path is required for `clean-webpack-plugin`
     path: path.resolve(__dirname, "dist"),
+    publicPath: path.publicUrlOrPath,
     // this places all images processed in an image folder
     assetModuleFilename: "images/[hash][ext][query]",
   },
@@ -108,6 +109,7 @@ module.exports = {
   devServer: {
     static: false,
     hot: "only",
-    port: 3000
+    port: 3000,
+    historyApiFallback: true
   },
 };

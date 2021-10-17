@@ -2,5 +2,54 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+.Container {
+    padding: 2em;
+    padding-bottom: 1em;
+}
+
+.HeroText {
+    color: white;
+    position: absolute;
+    top: 20%;
+    padding: 2em;
+    font-size: 2em;
+}
+
+ol {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+
+    &.Home {
+        background: url("../images/icons/Home.png") no-repeat center / 40px 40px;
+    }
+
+    &.Browse {
+        background: url("../images/icons/Browse.png") no-repeat center / 40px 40px;
+    }
+
+    &.Shop {
+        background: url("../images/icons/Cart.png") no-repeat center / 40px 40px;
+    }
+
+    &.Profile {
+        background: url("../images/icons/Profile.png") no-repeat center / 40px 40px;
+    }
 }

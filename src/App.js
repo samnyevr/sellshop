@@ -1,32 +1,37 @@
 import React, {Component, useEffect, useState} from "react";
-
-import axios from "axios"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/index.scss"
-import {Onboarding} from "./pages/index.js";
+import {Onboarding, Browse, Home} from "./pages/index.js";
+import Navbar from "./components/navbar"
 
 const App = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:3001/products")
-      .then((res) => {
-        setProducts(res.data);
-      })
-    ;
-  }, []) 
-
   return (
-    <>
-      <Onboarding></Onboarding>
-      
-      <div>{ products.map((value, key) => {
-        return <div key={key}>{value.name}</div>
-      })
-        }
-      </div>
-    </>
-  );
+  <div>
+    <Router>
+    <div>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/login">
+        <Onboarding />
+      </Route>
+      <Route path="/browse/b">
+        <Home />
+      </Route>
+      <Route path="/browse">
+        <Browse />
+      </Route>
+    </Switch>
+    </div>
+    
+  <Navbar>
+    </Navbar>
+
+  </Router>
+  </div>
+  )
 };
 
 export default App;
