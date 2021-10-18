@@ -6,7 +6,7 @@ export default function Onboarding() {
     }
 
     return (
-    <div>
+    <div className="Pages">
         <section>
             <h1>Log In</h1>
             <form onSubmit={handleSubmit}>

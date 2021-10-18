@@ -3,18 +3,18 @@ import {BrowserRouter as Router, Link} from "react-router-dom"
 
 export default function Navbar() {
     return (
-        <ol>
+        <ol className="Navbar">
             <Link to="/">
-                <li className="Home"></li>
+                <li className="Navbar Home"></li>
             </Link>
             <Link to='/browse'>
-                <li className="Browse"></li>
+                <li className="Navbar Browse"></li>
             </Link>
             <Link to='/checkout'>
-                <li className="Shop"></li>
+                <li className="Navbar Shop"></li>
             </Link>
             <Link to='/login'>
-                <li className="Profile"></li>
+                <li className="Navbar Profile"></li>
             </Link>
         </ol>
     )

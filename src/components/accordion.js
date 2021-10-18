@@ -1,23 +1,37 @@
 import React, {useState, useEffect} from "react";
 
-import axios from "axios"
+import Cloth1 from "../images/Products/Cloth1.jpg";
+import Cloth2 from "../images/Products/Cloth2.jpg";
+import Cloth3 from "../images/Products/Cloth3.jpg";
+import Cloth4 from "../images/Products/Cloth4.jpg";
+import Cloth5 from "../images/Products/Cloth5.jpg";
 
 export default function Accordion() {
-    const [products, setProducts] = useState([]);
+    return (<>
+        <section className="AccordionContainer">
+            <ol className="Accordion">
+                <li className="Accordion">
+                    <img src={Cloth1} />
+                    <p>Women Plain Tee</p>
+                </li>
+                <li className="Accordion">
+                    <img src={Cloth2} />
+                    <p>Kid's Plain Tee</p>
+                </li>
+                <li className="Accordion">
+                    <img src={Cloth3} />
+                    <p>Men Graphic Tee</p>
+                </li>
+                <li className="Accordion">
+                    <img src={Cloth4} />
+                    <p>Women Graphic</p>
+                </li>
+                <li className="Accordion">
+                    <img src={Cloth5} />
+                    <p>Strips Tee</p>
+                </li>
 
-    useEffect(() => {
-        axios.get("http://localhost:3001/products")
-        .then((res) => {
-            setProducts(res.data);
-        })
-        ;
-    }, []) 
-
-    return (
-        <div>{ products.map((value, key) => {
-            return <div key={key}>{value.name}</div>
-          })
-            }
-          </div>
-    )
+            </ol>
+        </section>
+    </>)
 }

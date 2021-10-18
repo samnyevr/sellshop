@@ -14,7 +14,7 @@ export default function Browse() {
     }, []) 
 
     return (
-        <div>{ products.map((value, key) => {
+        <div className="Pages">{ products.map((value, key) => {
             return <div key={key}>{value.name}</div>
           })
             }
