@@ -5,16 +5,16 @@ export default function Navbar() {
     return (
         <ol>
             <Link to="/">
-                <li className="Home">Home</li>
+                <li className="Home"></li>
             </Link>
             <Link to='/browse'>
-                <li className="Browse">Browse</li>
+                <li className="Browse"></li>
             </Link>
-            <Link to=''>
-                <li className="Shop">Shop</li>
+            <Link to='/checkout'>
+                <li className="Shop"></li>
             </Link>
-            <Link to=''>
-                <li className="Profile">Profile</li>
+            <Link to='/login'>
+                <li className="Profile"></li>
             </Link>
         </ol>
     )
