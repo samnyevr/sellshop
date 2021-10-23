@@ -14,10 +14,16 @@ export default function Browse() {
     }, []) 
 
     return (
-        <div className="Pages">{ products.map((value, key) => {
-            return <div key={key}>{value.name}</div>
-          })
-            }
-          </div>
+        <div className="Pages Browse">
+            {products.map((value, key) => {
+                return (
+                    <div className="Product" key={key}>
+                        <img src={value.img} />
+                        <h1>{value.name}</h1>
+                        <p>{value.price}</p>
+                    </div>
+                )
+            })} 
+        </div>
     )
 }

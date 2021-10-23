@@ -45,6 +45,7 @@ ol.Navbar{
     bottom: 0;
     width: 100vw;
     background: pink;
+    z-index: 3;
 }
 
 li.Navbar{
@@ -125,5 +126,17 @@ li.Accordion {
 
 .Pages {
     padding: 1.5em;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.Browse {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.Product {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
 }
