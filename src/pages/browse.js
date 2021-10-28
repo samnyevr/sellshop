@@ -14,16 +14,19 @@ export default function Browse() {
     }, []) 
 
     return (
-        <div className="Pages Browse">
+        <div className="Pages">
+            <h1 className="Header">Browse</h1>
+            <section className="Browse">
             {products.map((value, key) => {
                 return (
                     <div className="Product" key={key}>
                         <img src={value.img} />
-                        <h1>{value.name}</h1>
+                        <h2>{value.name}</h2>
                         <p>{value.price}</p>
                     </div>
                 )
             })} 
+            </section>
         </div>
     )
 }
