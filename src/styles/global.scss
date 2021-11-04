@@ -230,3 +230,90 @@ li.Accordion {
         }
     }
 }
+
+.BrowseHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    .Filter {
+        display: flex;
+        position: relative;
+
+        .FilterIcon {
+            margin-left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            .Icon {
+                height: 1px;
+                color: black;
+                background-color: black;
+            }
+
+            .Line1 {
+                width: 20px;
+            }
+            
+            .Line2 {
+                width: 30px;
+            }
+            
+            .Line3 {
+                width: 15px;
+            }
+
+            .Line4 {
+                width: 15px;
+            }
+        }
+    }
+
+    .Modal {
+        position: absolute;
+        width: 200px;
+        height: 500px;
+        background-color: rgb(255, 234, 234);
+        top: 5%;
+        right: 5%;
+
+        .Icon {
+            height: 2px;
+            width: 20px;
+            background-color: black;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+        }
+
+        .Cross1 {
+            transform: rotate(45deg);
+        }
+        .Cross2 {
+            transform: rotate(-45deg);
+        }
+
+        .FilterList {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            p {
+                padding: 20px;
+            }
+
+            .FilterListActive {
+                background-color: red;
+            }
+        }
+    }
+}
