@@ -8,7 +8,8 @@ export default function Browse() {
     const [filterOptions, setFilterOptions] = useState({});
 
     useEffect(() => {
-        axios.get("http://localhost:3001/products")
+//        axios.get("http://localhost:3001/products")
+        axios.get("https://sellshop-server.herokuapp.com/products")
         .then((res) => {
             setProducts(res.data);
         });
@@ -77,11 +78,12 @@ export default function Browse() {
             <section className="Browse">
             {products.map((value, key) => {
                 return (
-                    <div className="Product" key={key}>
+                    
+                    (<div className="Product" key={key}>
                         <img src={value.img} />
                         <h2>{value.name}</h2>
                         <p>{value.price}</p>
-                    </div>
+                    </div>)
                 )
             })} 
             </section>
